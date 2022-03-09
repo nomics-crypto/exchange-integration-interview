@@ -33,12 +33,12 @@ For this challenge we will be using Binance as an example. They have a comprehen
 
 Here are some relevant links:
 
-* (API Documentation)[https://binance-docs.github.io/apidocs/spot/en/#change-log]
-* (API List of Markets)[https://binance-docs.github.io/apidocs/spot/en/#exchange-information]
-* (API Candles)[https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data]
-* (API Order Book)[https://binance-docs.github.io/apidocs/spot/en/#order-book]
-* (API Rate Limits)[https://binance-docs.github.io/apidocs/spot/en/#limits]
-* (Binance's Markets on Nomics)[https://nomics.com/exchanges/binance/markets]
+* [API Documentation](https://binance-docs.github.io/apidocs/spot/en/#change-log)
+* [API List of Markets](https://binance-docs.github.io/apidocs/spot/en/#exchange-information)
+* [API Candles](https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data)
+* [API Order Book](https://binance-docs.github.io/apidocs/spot/en/#order-book)
+* [API Rate Limits](https://binance-docs.github.io/apidocs/spot/en/#limits)
+* [Binance's Markets on Nomics](https://nomics.com/exchanges/binance/markets)
 
 ## Challenge Steps
 
@@ -62,7 +62,7 @@ It will immediately give you errors, since you haven't built out the API yet. It
 
 ### Step 3. Implement /info
 
-The first endpoint you should implement is the (/info)[https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#info---exchange-information---required] endpoint. It returns basic exchange information.
+The first endpoint you should implement is the [/info](https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#info---exchange-information---required) endpoint. It returns basic exchange information.
 
 You can fill this out with the bare minimum for the purposes of this exercise.
 
@@ -78,15 +78,15 @@ At this point, when you run the auditor, it should pass on the info endpoint and
 
 ### Step 4. Implement /markets
 
-Now the fun begins! Implement the (/markets)[https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#markets---available-markets---required] endpoint according to our specification, using the Binance API's (Exchange Information)[https://binance-docs.github.io/apidocs/spot/en/#exchange-information] endpoint. You will need to read their documentation and ours to figure out which fields map to which.
+Now the fun begins! Implement the [/markets](https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#markets---available-markets---required) endpoint according to our specification, using the Binance API's [Exchange Information](https://binance-docs.github.io/apidocs/spot/en/#exchange-information) endpoint. You will need to read their documentation and ours to figure out which fields map to which.
 
 ### Step 5. Implement /candles
 
-When `/markets` is working we can move on to (/candles)[https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#candles---candles---discouraged] using the Binance API's (Kline/Candlestick Data)[https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data]. Note that this endpoint expects a parameter (the market) from the markets endpoint and passes it along to Binance, as well as an interval parameter. It's not very well documented but the intervals are the same as the Nomics intervals.
+When `/markets` is working we can move on to [/candles](https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#candles---candles---discouraged) using the Binance API's [Kline/Candlestick Data](https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data). Note that this endpoint expects a parameter (the market) from the markets endpoint and passes it along to Binance, as well as an interval parameter. It's not very well documented but the intervals are the same as the Nomics intervals.
 
 ### Step 6. Implement /orders/snapshot
 
-Finally we can implement the (/orders/snapshot)[https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#orderssnapshot---current-order-book-snapshot---required-for-a-verified-exchanges] API using Binance's (Order Book)[https://binance-docs.github.io/apidocs/spot/en/#order-book] endpoint. Similar to `/candles` it expects a market.
+Finally we can implement the [/orders/snapshot](https://github.com/nomics-crypto/nomics-platform/blob/master/doc/cryptocurrency-api-exchange-integration.md#orderssnapshot---current-order-book-snapshot---required-for-a-verified-exchanges) API using Binance's [Order Book](https://binance-docs.github.io/apidocs/spot/en/#order-book) endpoint. Similar to `/candles` it expects a market.
 
 ### Step 7. Review
 
